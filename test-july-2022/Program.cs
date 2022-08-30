@@ -8,3 +8,6 @@
 }
 
 string[] array = { "hello", "2", "world", ":-)" };
+Console.WriteLine("Первоначальный массив строк: ");
+Print(array);
+Console.WriteLine();
