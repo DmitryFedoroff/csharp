@@ -41,3 +41,5 @@ string[] array = { "hello", "2", "world", ":-)" };
 Console.WriteLine("Первоначальный массив строк: ");
 Print(array);
 Console.WriteLine();
+Console.WriteLine("Массив строк длиной меньше либо равной 3 символа: ");
+Print(CreateArr(array));
