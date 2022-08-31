@@ -22,6 +22,21 @@ int CountElem(string[] inputArray)
     return count;
 }
 
+string[] CreateArr(string[] inputArray)
+{
+    string[] outputArray = new string [CountElem(inputArray)];
+    int index = 0;
+    for (int i = 0; i < inputArray.Length; i++)
+    {
+        if (inputArray[i].Length <= 3)
+        {
+            outputArray[index] = inputArray[i];
+            index++;
+        }
+    }
+    return outputArray;
+}
+
 string[] array = { "hello", "2", "world", ":-)" };
 Console.WriteLine("Первоначальный массив строк: ");
 Print(array);
