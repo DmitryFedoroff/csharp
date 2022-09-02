@@ -17,5 +17,15 @@ ReInput:
     }
 }
 
+string Print(string[] arr)
+{
+    string output = String.Empty;
+    foreach (string element in arr)
+    {
+        output += (element + " ");
+    }
+    return output;
+}
+
 string[] array = ReadInputStream("Введите элементы массива: ");
 int charLim = 3;
