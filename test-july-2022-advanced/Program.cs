@@ -27,6 +27,26 @@ string Print(string[] arr)
     return output;
 }
 
+void PrintConsole(string[] arr, int charLim)
+{
+    if (arr.Length != 0 && arr.Length != CountElem(arr, charLim))
+    {
+        string inputCons = Print(arr);
+        Console.WriteLine("Исходный массив строк: " + inputCons);
+        Console.WriteLine();
+    }
+    else if (arr.Length != 0 && arr.Length == CountElem(arr, charLim))
+    {
+        string outputCons = Print(arr);
+        Console.WriteLine("Массив строк длиной меньше либо равной 3 символа: " + outputCons);
+        Console.WriteLine();
+    }
+    else if (arr.Length == 0)
+    {
+        Console.WriteLine("В исходном массиве нет строк длиной меньше либо равной 3 символа.");
+    }
+}
+
 int CountElem(string[] inputArray, int charLim)
 {
     int i = 0;
