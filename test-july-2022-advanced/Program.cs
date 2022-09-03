@@ -27,5 +27,20 @@ string Print(string[] arr)
     return output;
 }
 
+int CountElem(string[] inputArray, int charLim)
+{
+    int i = 0;
+    int count = 0;
+    while (i < inputArray.Length)
+    {
+        if (inputArray[i].Length <= charLim)
+        {
+            count++;
+        }
+        i++;
+    }
+    return count;
+}
+
 string[] array = ReadInputStream("Введите элементы массива: ");
 int charLim = 3;
