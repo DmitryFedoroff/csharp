@@ -81,3 +81,4 @@ string[] array = ReadInputStream("Введите элементы массива
 int charLim = 3;
 Console.WriteLine();
 PrintConsole(array, charLim);
+PrintConsole(CreateArr(array, charLim), charLim);
