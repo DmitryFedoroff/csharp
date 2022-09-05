@@ -62,6 +62,21 @@ int CountElem(string[] inputArray, int charLim)
     return count;
 }
 
+string[] CreateArr(string[] inputArray, int charLim)
+{
+    string[] outputArray = new string [CountElem(inputArray, charLim)];
+    int index = CountElem(inputArray, charLim);
+    for (int i = 0; i < inputArray.Length; i++)
+    {
+        if (inputArray[i].Length <= charLim)
+        {
+            outputArray[outputArray.Length - index] = inputArray[i];
+            index--;
+        }
+    }
+    return outputArray;
+}
+
 string[] array = ReadInputStream("Введите элементы массива: ");
 int charLim = 3;
 Console.WriteLine();
