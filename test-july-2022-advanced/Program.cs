@@ -77,6 +77,24 @@ string[] CreateArr(string[] inputArray, int charLim)
     return outputArray;
 }
 
+void WriteToFile(string[] arr, int charLim)
+{
+    if (arr.Length != 0 && arr.Length != CountElem(arr, charLim))
+    {
+        string inputFile = Print(arr);
+        File.WriteAllText("input.txt", inputFile);
+        Console.WriteLine("Исходный массив строк сохранен в файл input.txt");
+        Console.WriteLine();
+    }
+    else if (arr.Length != 0 && arr.Length == CountElem(arr, charLim))
+    {
+        string outputFile = Print(arr);
+        File.WriteAllText("output.txt", outputFile);
+        Console.WriteLine("Массив строк длиной меньше либо равной 3 символа сохранен в файл output.txt");
+        Console.WriteLine();
+    }
+}
+
 string[] array = ReadInputStream("Введите элементы массива: ");
 int charLim = 3;
 Console.WriteLine();
