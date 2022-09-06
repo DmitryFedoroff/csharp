@@ -101,3 +101,4 @@ Console.WriteLine();
 PrintConsole(array, charLim);
 WriteToFile(array, charLim);
 PrintConsole(CreateArr(array, charLim), charLim);
+WriteToFile(CreateArr(array, charLim), charLim);
