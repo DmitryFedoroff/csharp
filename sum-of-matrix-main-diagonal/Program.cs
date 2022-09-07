@@ -23,6 +23,17 @@ void Fill(int[,] matr)
     }
 }
 
+int CalcDiagSum(int[,] matr)
+{
+    int diagSum = 0;
+    int minLength = Math.Min(matr.GetLength(0), matr.GetLength(1));
+    for (int i = 0; i < minLength; i++)
+    {
+        diagSum += matr[i, i];
+    }
+    return diagSum;
+}
+
 Console.Write("Enter number of matrix rows: ");
 int n = int.Parse(Console.ReadLine());
 Console.Write("Enter number of matrix columns: ");
