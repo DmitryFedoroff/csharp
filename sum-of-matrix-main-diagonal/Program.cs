@@ -34,6 +34,11 @@ int CalcDiagSum(int[,] matr)
     return diagSum;
 }
 
+void PrintDiagSum(int[,] matr)
+{
+    Console.WriteLine("Sum of diagonal elements of matrix: " + CalcDiagSum(matr));
+}
+
 Console.Write("Enter number of matrix rows: ");
 int n = int.Parse(Console.ReadLine());
 Console.Write("Enter number of matrix columns: ");
