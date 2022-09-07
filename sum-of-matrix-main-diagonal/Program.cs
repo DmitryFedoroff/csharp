@@ -47,3 +47,4 @@ Console.WriteLine();
 int[,] matrix = new int[n, m];
 Fill(matrix);
 Print(matrix);
+PrintDiagSum(matrix);
