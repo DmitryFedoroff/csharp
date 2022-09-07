@@ -29,3 +29,5 @@ Console.Write("Enter number of matrix columns: ");
 int m = int.Parse(Console.ReadLine());
 Console.WriteLine();
 int[,] matrix = new int[n, m];
+Fill(matrix);
+Print(matrix);
