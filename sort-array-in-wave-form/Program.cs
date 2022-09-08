@@ -15,3 +15,5 @@ void Fill(int[] arr)
 
 int[] array = new int[10];
 Fill(array);
+Console.Write("Unsorted array: ");
+Print(array);
