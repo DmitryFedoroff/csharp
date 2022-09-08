@@ -41,3 +41,5 @@ int[] array = new int[10];
 Fill(array);
 Console.Write("Unsorted array: ");
 Print(array);
+Console.Write("Array sorted in wave form: ");
+Print(SortWave(array));
