@@ -30,4 +30,8 @@ int[,] matrixA = new int[n, m];
 int[,] matrixB = new int[m, n];
 Console.WriteLine();
 Fill(matrixA);
+Console.WriteLine("Matrix A:");
+Print(matrixA);
 Fill(matrixB);
+Console.WriteLine("Matrix B:");
+Print(matrixB);
