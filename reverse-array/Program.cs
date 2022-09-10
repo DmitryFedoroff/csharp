@@ -13,6 +13,19 @@ void Fill(int[] arr)
     }
 }
 
+int[] ReverseArray(int[] arr)
+{
+    int temp;
+    int len = arr.Length;
+    for (int i = 0; i < len / 2; i++)
+    {
+        temp = arr[i];
+        arr[i] = arr[len - 1 - i];
+        arr[len - 1 - i] = temp;
+    }
+    return arr;
+}
+
 int[] array = new int[10];
 Fill(array);
 Console.Write("Original array: ");
