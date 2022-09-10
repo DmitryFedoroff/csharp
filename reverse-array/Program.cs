@@ -30,3 +30,5 @@ int[] array = new int[10];
 Fill(array);
 Console.Write("Original array: ");
 Print(array);
+Console.Write("Reversed array: ");
+Print(ReverseArray(array));
