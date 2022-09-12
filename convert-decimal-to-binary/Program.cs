@@ -35,3 +35,4 @@ void PrintBinaryNum(int[] arr, int num)
 Console.Write("Enter decimal number to convert: ");
 int num = int.Parse(Console.ReadLine());
 int[] array = new int[FindArrSize(num)];
+PrintBinaryNum(array, num);
