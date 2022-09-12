@@ -1,4 +1,4 @@
-﻿﻿int FindArrSize(int num)
+﻿int FindArrSize(int num)
 {
     int temp = num;
     int count = 0;
@@ -12,3 +12,4 @@
 
 Console.Write("Enter decimal number to convert: ");
 int num = int.Parse(Console.ReadLine());
+int[] array = new int[FindArrSize(num)];
