@@ -22,6 +22,16 @@ int[] ConvertToBinary(int[] arr, int num)
     return arr;
 }
 
+void PrintBinaryNum(int[] arr, int num)
+{
+    arr = ConvertToBinary(arr, num);
+    for (int j = arr.Length - 1; j >= 0; j--)
+    {
+        Console.Write(arr[j]);
+    }
+    Console.WriteLine();
+}
+
 Console.Write("Enter decimal number to convert: ");
 int num = int.Parse(Console.ReadLine());
 int[] array = new int[FindArrSize(num)];
