@@ -30,3 +30,5 @@ int m = int.Parse(Console.ReadLine());
 Console.WriteLine();
 int[,] array = new int[n, m];
 Fill(array);
+Console.WriteLine("Unsorted array: ");
+Print(array);
