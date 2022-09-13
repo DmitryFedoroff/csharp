@@ -53,3 +53,5 @@ int[,] array = new int[n, m];
 Fill(array);
 Console.WriteLine("Unsorted array: ");
 Print(array);
+Console.WriteLine("Array rows sorted in descending order: ");
+Print(BubbleSortRow(array));
