@@ -23,6 +23,27 @@ void Fill(int[,] arr)
     }
 }
 
+int[,] BubbleSortRow(int[,] arr)
+{
+    int temp = 0;
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            for (int k = j + 1; k < arr.GetLength(1); k++)
+            {
+                if (arr[i, j] < arr[i, k])
+                {
+                    temp = arr[i, j];
+                    arr[i, j] = arr[i, k];
+                    arr[i, k] = temp;
+                }
+            }
+        }
+    }
+    return arr;
+}
+
 Console.Write("Enter number of array rows: ");
 int n = int.Parse(Console.ReadLine());
 Console.Write("Enter number of array columns: ");
