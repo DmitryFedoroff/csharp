@@ -76,3 +76,5 @@ Console.WriteLine("Unsorted array: ");
 Print(array);
 Console.WriteLine("Array rows sorted in descending order: ");
 Print(BubbleSortRow(array));
+Console.WriteLine("Array columns sorted in ascending order: ");
+Print(BubbleSortCol(array));
