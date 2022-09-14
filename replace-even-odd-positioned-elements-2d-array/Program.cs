@@ -51,3 +51,5 @@ int[,] array = new int[n, m];
 Fill(array);
 Console.WriteLine("Original array: ");
 Print(array);
+Console.WriteLine("Updated array: ");
+Print(ReplaceElem(array));
