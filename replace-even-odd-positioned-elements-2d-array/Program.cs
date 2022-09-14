@@ -23,6 +23,25 @@ void Fill(int[,] arr)
     }
 }
 
+int[,] ReplaceElem(int[,] arr)
+{
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            if (i % 2 == 0 && j % 2 == 0)
+            {
+                arr[i, j] = (int)Math.Pow(arr[i, j], 2);
+            }
+            else
+            {
+                arr[i, j] = (int)Math.Pow(arr[i, j], 3);
+            }
+        }
+    }
+    return arr;
+}
+
 Console.Write("Enter number of array rows: ");
 int n = int.Parse(Console.ReadLine());
 Console.Write("Enter number of array columns: ");
