@@ -29,3 +29,4 @@ Console.Write("Enter number of array columns: ");
 int m = int.Parse(Console.ReadLine());
 Console.WriteLine();
 int[,] array = new int[n, m];
+Fill(array);
