@@ -29,3 +29,4 @@ int[] FillFiboNums(int[] fiboNums, int numsLimit)
 Console.Write("Enter length of Fibonacci series: ");
 int numsLimit = int.Parse(Console.ReadLine());
 int[] array = new int[numsLimit];
+Print(FillFiboNums(array, numsLimit));
