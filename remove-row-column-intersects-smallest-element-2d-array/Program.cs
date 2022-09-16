@@ -91,3 +91,4 @@ Console.WriteLine();
 Fill(array);
 Print(array);
 PrintMinVal(array);
+Print(CreateNewArr(array));
