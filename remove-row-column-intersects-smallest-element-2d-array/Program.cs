@@ -53,6 +53,35 @@ void PrintMinVal(int[,] arr)
     Console.WriteLine();
 }
 
+int[,] CreateNewArr(int[,] arr)
+{
+    int[,] arrNew = new int[arr.GetLength(0) - 1, arr.GetLength(1) - 1];
+    (int min, int iMin, int jMin) = FindMinVal(arr);
+    for (int i = 0; i < arrNew.GetLength(0); i++)
+    {
+        for (int j = 0; j < arrNew.GetLength(1); j++)
+        {
+            if (i < iMin && j < jMin)
+            {
+                arrNew[i, j] = arr[i, j]; 
+            }
+            else if (i >= iMin && j < jMin)
+            {
+                arrNew[i, j] = arr[i + 1, j];
+            }
+            else if (i < iMin && j >= jMin)
+            {
+                arrNew[i, j] = arr[i, j + 1];
+            }
+            else
+            {
+                arrNew[i, j] = arr[i + 1, j + 1];
+            }        
+        }
+    }
+    return arrNew;    
+}
+
 Console.Write("Enter number of array rows: ");
 int n = int.Parse(Console.ReadLine());
 Console.Write("Enter number of array columns: ");
