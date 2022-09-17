@@ -25,6 +25,25 @@ void Fill(int[,] arr)
     }
 }
 
+(int, int, int) FindMinVal(int[,] arr)
+{
+    int minElemRow = 0;
+    int minElemCol = 0;
+    int minElem = arr[minElemRow, minElemCol];
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            if (arr[i, j] < minElem)
+            {
+                minElem = arr[i, j];
+                (minElemRow, minElemCol) = (i, j);
+            }
+        }
+    }
+    return (minElem, minElemRow, minElemCol);
+}
+
 Console.Write("Enter number of array rows: ");
 int n = int.Parse(Console.ReadLine());
 Console.Write("Enter number of array columns: ");
