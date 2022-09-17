@@ -81,3 +81,4 @@ Console.WriteLine();
 Fill(array);
 Print(array);
 PrintMinVal(array);
+PrintNewArr(array);
