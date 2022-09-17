@@ -59,3 +59,4 @@ int[,] array = new int[n, m];
 Console.WriteLine();
 Fill(array);
 Print(array);
+PrintMinVal(array);
