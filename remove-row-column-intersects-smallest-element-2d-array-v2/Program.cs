@@ -44,6 +44,13 @@ void Fill(int[,] arr)
     return (minElem, minElemRow, minElemCol);
 }
 
+void PrintMinVal(int[,] arr)
+{
+    (int min, int iMin, int jMin) = FindMinVal(arr);
+    Console.WriteLine("First smallest element = " + min + "; " + "Row index = " + iMin + "; " + "Column index = " + jMin + ".");
+    Console.WriteLine();
+}
+
 Console.Write("Enter number of array rows: ");
 int n = int.Parse(Console.ReadLine());
 Console.Write("Enter number of array columns: ");
