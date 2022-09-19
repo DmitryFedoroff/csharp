@@ -52,3 +52,4 @@ void WriteToFile(int[] arr)
 Console.Write("Enter position of rotation: ");
 int k = int.Parse(Console.ReadLine());
 int[] array = GetData("input-data.txt");
+WriteToFile(RotateArr(array, k));
