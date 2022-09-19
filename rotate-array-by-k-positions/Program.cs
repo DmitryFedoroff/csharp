@@ -41,6 +41,14 @@ string Print(int[] array)
     return output;
 }
 
+void WriteToFile(int[] arr)
+{
+    string outputFile = Print(arr);
+    File.WriteAllText("output-data.txt", outputFile);
+    Console.WriteLine("The result is saved to output-data.txt");
+    Console.WriteLine();
+}
+
 Console.Write("Enter position of rotation: ");
 int k = int.Parse(Console.ReadLine());
 int[] array = GetData("input-data.txt");
