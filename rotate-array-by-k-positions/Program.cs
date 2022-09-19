@@ -30,6 +30,17 @@ int[] RotateArr(int[] inputArr, int k)
     return result;
 }
 
+string Print(int[] array)
+{
+    int len = array.Length;
+    string output = String.Empty;
+    for (int i = 0; i < len; i++)
+    {
+        output += (array[i] + " ");
+    }
+    return output;
+}
+
 Console.Write("Enter position of rotation: ");
 int k = int.Parse(Console.ReadLine());
 int[] array = GetData("input-data.txt");
