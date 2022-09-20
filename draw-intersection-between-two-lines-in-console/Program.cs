@@ -1,0 +1,11 @@
+﻿Console.WriteLine("Enter data to find intersection point of two lines.");
+Console.WriteLine("For example, b1 = 2, k1 = 5, b2 = 4, k2 = 9");
+Console.Write("Enter b1: ");
+int b1 = int.Parse(Console.ReadLine());
+Console.Write("Enter k1: ");
+int k1 = int.Parse(Console.ReadLine());
+Console.Write("Enter b2: ");
+int b2 = int.Parse(Console.ReadLine());
+Console.Write("Enter k2: ");
+int k2 = int.Parse(Console.ReadLine());
+Console.WriteLine();
