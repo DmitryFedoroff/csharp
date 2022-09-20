@@ -18,3 +18,4 @@ int b2 = int.Parse(Console.ReadLine());
 Console.Write("Enter k2: ");
 int k2 = int.Parse(Console.ReadLine());
 Console.WriteLine();
+CheckParallel(k1, k2);
