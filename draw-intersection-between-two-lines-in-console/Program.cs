@@ -87,3 +87,7 @@ int k2 = int.Parse(Console.ReadLine());
 Console.WriteLine();
 CheckParallel(k1, k2);
 int[,] arr = new int[5, 13]; // template of a two-dimensional array for a table of x and y coordinates of 5 points
+Console.WriteLine("\u001B[34mTable of values for 1st line: \u001b[0m"); // ANSI .NET color blue \u001B[34m
+PrintTable(arr, k1, b1);
+Console.WriteLine("\u001B[31mTable of values for 2nd line: \u001b[0m"); // ANSI .NET color red \u001B[31m
+PrintTable(arr, k2, b2);
