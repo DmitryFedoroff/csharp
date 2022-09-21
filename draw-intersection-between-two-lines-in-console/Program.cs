@@ -86,3 +86,4 @@ Console.Write("Enter k2: ");
 int k2 = int.Parse(Console.ReadLine());
 Console.WriteLine();
 CheckParallel(k1, k2);
+int[,] arr = new int[5, 13]; // template of a two-dimensional array for a table of x and y coordinates of 5 points
