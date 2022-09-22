@@ -84,6 +84,66 @@ double[,] cross = new double[,]
     { 4, 0, 11,  0,  0,  6 },
 };
 
+void PrintCrossTable(double[,] CrossTable, int k1, int b1, int k2, int b2)
+{
+    for (int i = 0; i < CrossTable.GetLength(0); i++)
+    {
+        for (int j = 0; j < CrossTable.GetLength(1); j++)
+        {
+            if (CrossTable[i, j] == -1)
+            {
+                CrossTable[i, j] = Math.Round((double)(b2 - b1) / (k1 - k2), 1);
+                if (CrossTable[i, j] >= 0 && CrossTable[i, j] < 10)
+                {
+                    Console.Write("  " + CrossTable[i, j] + " ");
+                }
+                else if (CrossTable[i, j] < 0 || CrossTable[i, j] >= 10 
+                    && CrossTable[i, j] < 100)
+                {
+                    Console.Write(" " + CrossTable[i, j] + " ");
+                }
+                else
+                {
+                    Console.Write(CrossTable[i, j]);
+                }
+            }
+            else if (CrossTable[i, j] == -2)
+            {
+                CrossTable[i, j] = Math.Round((double)(k1 * b2 - k2 * b1) / (k1 - k2), 1);
+                if (CrossTable[i, j] >= 0 && CrossTable[i, j] < 10)
+                {
+                    Console.Write("  " + CrossTable[i, j] + " ");
+                }
+                else if (CrossTable[i, j] < 0 && CrossTable[i, j] > -10
+                    || CrossTable[i, j] >= 10 && CrossTable[i, j] < 100)
+                {
+                    Console.Write(" " + CrossTable[i, j] + " ");
+                }
+                else
+                {
+                    Console.Write(CrossTable[i, j]);
+                }
+            }
+            else if (CrossTable[i,j] == 0) Console.Write("───");
+            else if (CrossTable[i,j] == 1) Console.Write(" X ");
+            else if (CrossTable[i,j] == 2) Console.Write(" Y ");
+            else if (CrossTable[i,j] == 3) Console.Write("┌");
+            else if (CrossTable[i,j] == 4) Console.Write("└");
+            else if (CrossTable[i,j] == 5) Console.Write("┐");
+            else if (CrossTable[i,j] == 6) Console.Write("┘");
+            else if (CrossTable[i,j] == 7) Console.Write("┼");
+            else if (CrossTable[i,j] == 8) Console.Write("├");
+            else if (CrossTable[i,j] == 9) Console.Write("┤");
+            else if (CrossTable[i,j] == 10) Console.Write("┬");
+            else if (CrossTable[i,j] == 11) Console.Write("┴");
+            else if (CrossTable[i,j] == 12) Console.Write("│");
+            else Console.Write("");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+
 Console.WriteLine("Enter data to find intersection point of two lines.");
 Console.WriteLine("For example, b1 = 2, k1 = 5, b2 = 4, k2 = 9");
 Console.Write("Enter b1: ");
