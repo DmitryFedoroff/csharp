@@ -74,6 +74,16 @@ void PrintTable(int[,] coordTable, int k, int b)
     Console.WriteLine();
 }
 
+// another frame of a coordinate table based on a two-dimensional array
+double[,] cross = new double[,]
+{
+    { 3, 0, 10,  0,  0,  5 },
+    {12, 1, 12, -1, 13, 12 },
+    { 8, 0,  7,  0,  0,  9 },
+    {12, 2, 12, -2, 13, 12 },
+    { 4, 0, 11,  0,  0,  6 },
+};
+
 Console.WriteLine("Enter data to find intersection point of two lines.");
 Console.WriteLine("For example, b1 = 2, k1 = 5, b2 = 4, k2 = 9");
 Console.Write("Enter b1: ");
