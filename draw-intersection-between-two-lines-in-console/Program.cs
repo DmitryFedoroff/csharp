@@ -161,3 +161,5 @@ Console.WriteLine("\u001B[34mTable of values for 1st line: \u001b[0m"); // ANSI 
 PrintTable(arr, k1, b1);
 Console.WriteLine("\u001B[31mTable of values for 2nd line: \u001b[0m"); // ANSI .NET color red \u001B[31m
 PrintTable(arr, k2, b2);
+Console.WriteLine("\u001B[32mCoordinates of intersection point: \u001b[0m"); // ANSI .NET color green \u001B[32m
+PrintCrossTable(cross, k1, b1, k2, b2);
