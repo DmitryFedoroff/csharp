@@ -144,6 +144,79 @@ void PrintCrossTable(double[,] CrossTable, int k1, int b1, int k2, int b2)
     Console.WriteLine();
 }
 
+void PrintCoord(int[,] coord, int k1, int b1, int k2, int b2)
+{
+    for (int i = 0; i < coord.GetLength(0); i++)
+    {
+        for (int j = 0; j < coord.GetLength(1); j++)
+        {
+            for (int x = -2; x < 3; x++)
+            {
+                if (i == (coord.GetLength(0) / 2) - 2 * (k1 * x + b1)
+                    && j == (coord.GetLength(1) / 2) + 2 * x)
+                {
+                    Console.Write("\u001B[34m⬤\u001b[0m");
+                }
+                else if (i == (coord.GetLength(0) / 2) - 2 * (k2 * x + b2)
+                    && j == (coord.GetLength(1) / 2) + 2 * x)
+                {
+                    Console.Write("\u001B[31m⬤\u001b[0m");
+                }
+            }
+            if (i == (coord.GetLength(0) / 2 + 1) - (int)((double)(k1 * b2 - k2 * b1) / (k1 - k2))
+                && j == (coord.GetLength(1) / 2 - 1) + (int)((double)(b2 - b1) / (k1 - k2)))
+            {
+                Console.Write("\u001B[32m⦿ \u001b[0m");
+            }
+            else if (i == coord.GetLength(0) / 2 && j % 2 != 0 && j != coord.GetLength(1) / 2
+                && j <= coord.GetLength(1) - 2)
+            {
+                Console.Write("— ");
+            }
+            else if (i == coord.GetLength(0) / 2 && j % 2 == 0 && j != coord.GetLength(1) / 2
+                && j <= coord.GetLength(1) - 2)
+            {
+                Console.Write("| ");
+            }
+            else if (i != 0 && i % 2 != 0 && j == coord.GetLength(1) / 2)
+            {
+                Console.Write("|");
+            }                     
+            else if (i != 0 && i % 2 == 0 && i != coord.GetLength(0) / 2
+                && j == coord.GetLength(1) / 2)
+            {
+                Console.Write("—");
+            }
+            else if (i == coord.GetLength(0) / 2 && j == coord.GetLength(1) / 2)
+            {
+                Console.Write("+ ");
+            }
+            else if (i == coord.GetLength(0) / 2 + 1 && j == coord.GetLength(1) - 1)
+            {
+                Console.Write(" X");
+            }
+            else if (i == 0 && j == coord.GetLength(1) / 2 + 1)
+            {
+                Console.Write(" Y");
+            }
+            else if (i == coord.GetLength(0) / 2 && j == coord.GetLength(1) - 1)
+            {
+                Console.Write(">");
+            }
+            else if (i == 0 && j == coord.GetLength(1) / 2)
+            {
+                Console.Write("^");
+            }
+            else if (coord[i, j] == 0)
+            {
+                Console.Write("  ");
+            }
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+
 Console.WriteLine("Enter data to find intersection point of two lines.");
 Console.WriteLine("For example, b1 = 2, k1 = 5, b2 = 4, k2 = 9");
 Console.Write("Enter b1: ");
