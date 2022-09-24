@@ -39,6 +39,13 @@ void Fill(int[] arr)
     return (count, validElem);
 }
 
+void PrintValid(int[] arr)
+{
+    (int count, string validElem) = FindValid(arr);
+    Console.WriteLine("Number of elements divisible by their product or sum of digits: " + count);
+    Console.WriteLine("Elements divisible by their product or sum of digits: " + validElem);
+}
+
 int[] array = new int[10];
 Fill(array);
 Console.Write("Original array: ");
