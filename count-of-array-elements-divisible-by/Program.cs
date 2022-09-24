@@ -50,3 +50,4 @@ int[] array = new int[10];
 Fill(array);
 Console.Write("Original array: ");
 Print(array);
+PrintValid(array);
