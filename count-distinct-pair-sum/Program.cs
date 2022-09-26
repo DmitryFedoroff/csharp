@@ -35,3 +35,5 @@ int[] array = new int[4];
 Fill(array);
 Console.Write("Original array: ");
 Print(array);
+Console.Write("Number of unique sums of pairs: ");
+FindUniqSums(array);
