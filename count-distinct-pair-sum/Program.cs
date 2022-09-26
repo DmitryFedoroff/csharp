@@ -18,3 +18,4 @@ void Fill(int[] arr)
 }
 
 int[] array = new int[4];
+Fill(array);
