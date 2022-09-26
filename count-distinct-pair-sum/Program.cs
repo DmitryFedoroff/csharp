@@ -19,3 +19,5 @@ void Fill(int[] arr)
 
 int[] array = new int[4];
 Fill(array);
+Console.Write("Original array: ");
+Print(array);
