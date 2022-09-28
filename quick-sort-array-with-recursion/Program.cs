@@ -13,6 +13,22 @@ void Fill(int[] arr)
     }
 }
 
+int GetPivotIndex(int[] inputArray, int minIdx, int maxIdx)
+{
+    int pivotIdx = minIdx - 1;
+    for (int i = minIdx; i < maxIdx; i++)
+    {
+        if (inputArray[i] < inputArray[maxIdx])
+        {
+            pivotIdx++;
+            Swap(inputArray, i, pivotIdx);
+        }
+    }
+    pivotIdx++;
+    Swap(inputArray, pivotIdx, maxIdx);
+    return pivotIdx;
+}
+
 void Swap(int[] inputArray, int leftValue, int rightValue)
 {
     int temp = inputArray[leftValue];
