@@ -49,3 +49,5 @@ int[] array = new int[10];
 Fill(array);
 Console.Write("Original array: ");
 Print(array);
+Console.Write("Sorted array with quick sort using recursion: ");
+Print(QuickSort(array, 0, array.Length - 1));
