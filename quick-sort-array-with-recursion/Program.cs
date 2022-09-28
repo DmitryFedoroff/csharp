@@ -13,6 +13,13 @@ void Fill(int[] arr)
     }
 }
 
+void Swap(int[] inputArray, int leftValue, int rightValue)
+{
+    int temp = inputArray[leftValue];
+    inputArray[leftValue] = inputArray[rightValue];
+    inputArray[rightValue] = temp;
+}
+
 int[] array = new int[10];
 Fill(array);
 Console.Write("Original array: ");
