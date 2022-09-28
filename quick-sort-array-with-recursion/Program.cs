@@ -13,6 +13,15 @@ void Fill(int[] arr)
     }
 }
 
+int[] QuickSort(int[] inputArray, int minIdx, int maxIdx)
+{
+    if (minIdx >= maxIdx) return inputArray;
+    int pivot = GetPivotIndex(inputArray, minIdx, maxIdx);
+    QuickSort(inputArray, minIdx, pivot - 1);
+    QuickSort(inputArray, pivot + 1, maxIdx);
+    return inputArray;
+}
+
 int GetPivotIndex(int[] inputArray, int minIdx, int maxIdx)
 {
     int pivotIdx = minIdx - 1;
